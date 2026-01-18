@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Turno | Cosmetología</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>Reserva tu Turno</h1>
+    <p>Cosmetología & cuidado facial</p>
+  </div>
+
+  <form id="bookingForm">
+
+    <div class="form-group">
+      <label>Nombre completo</label>
+      <input type="text" id="name" required>
+      <div class="explanation" id="exp-name">
+        Se usa para registrar el turno a tu nombre.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Email o WhatsApp</label>
+      <input type="text" id="contact" required>
+      <div class="explanation" id="exp-contact">
+        Se utiliza para confirmaciones y recordatorios.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Servicio</label>
+      <select id="service" required>
+        <option value="">Seleccionar</option>
+        <option>Limpieza facial profunda</option>
+        <option>Tratamiento antiacné</option>
+        <option>Peeling químico</option>
+        <option>Hidratación facial</option>
+      </select>
+      <div class="explanation" id="exp-service">
+        Define duración y preparación del turno.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Fecha del turno</label>
+      <input type="date" id="date" required>
+      <div class="explanation" id="exp-date">
+        Se guarda en la agenda para evitar cruces.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Comentarios adicionales</label>
+      <textarea id="message" rows="3"></textarea>
+      <div class="explanation" id="exp-message">
+        Ayuda a personalizar el tratamiento.
+      </div>
+    </div>
+
+    <button type="submit">Confirmar reserva</button>
+  </form>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>Resumen de tu reserva</h2>
+
+    <div class="summary" id="summary"></div>
+
+    <div class="backend">
+      <strong>Simulación de backend:</strong><br><br>
+      ✔ Validación de datos<br>
+      ✔ Guardado en base de datos<br>
+      ✔ Bloqueo del horario<br>
+      ✔ Confirmación automática al cliente<br>
+      ✔ Recordatorios programados
+    </div>
+
+    <button class="close-btn" id="closeModal">Cerrar</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

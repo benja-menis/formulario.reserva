@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #fdf2f8, #fce7f3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 25px 60px rgba(0,0,0,.15);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: #831843;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: .4rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 4px rgba(236,72,153,.2);
+}
+
+/* EXPLANATION */
+.explanation {
+  margin-top: .6rem;
+  font-size: .9rem;
+  color: #831843;
+  background: #fdf2f8;
+  padding: .6rem .9rem;
+  border-radius: 12px;
+  display: none;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ec4899, #db2777);
+  color: white;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  max-width: 520px;
+  width: 100%;
+  border-radius: 22px;
+  padding: 2rem;
+  animation: scaleIn .3s ease;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.summary {
+  background: #fdf2f8;
+  padding: 1rem;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+}
+
+.backend {
+  font-size: .9rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.close-btn {
+  margin-top: 1.5rem;
+  background: #111827;
+}
